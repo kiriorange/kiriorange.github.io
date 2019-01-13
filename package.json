@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://kiriorange.github.io/",
   "dependencies": {
+    "animejs": "^3.0.0",
+    "charming": "^2.2.4",
     "gh-pages": "^2.0.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",

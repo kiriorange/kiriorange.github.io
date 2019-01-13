@@ -1,45 +1,77 @@
-.project .title {
-  color: red;
+@import url('https://fonts.googleapis.com/css?family=Monda|Sintony');
+
+.wrapper {
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 100%;
 }
 
-.project .text {
-  color: green;
+.project {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .thumbnail {
-  height:100px;
-  width:100px;
+  flex: 1 100%;
 }
 
-hr.style14 {
-  border: 0;
-  height: 1px;
-  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+.right {
+  flex: 1 100%;
 }
 
-h1 {
-  width: 70%;
-  margin: .7em auto;
+.words {
+  text-overflow: ellipsis;
   overflow: hidden;
-  text-align: center;
-  font-weight:300;
-  color: #fff;
+  padding-bottom: 10px
 }
-h1:before, h1:after {
-  content: "";
-  display: inline-block;
-  width: 50%;
-  margin: 0 .5em 0 -55%;
-  vertical-align: middle;
-  border-bottom: 1px solid;
+
+.title {
+  margin: 0px;
 }
-h1:after {
-  margin: 0 -55% 0 .5em;
+
+.technologies {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
-span {
-  display: inline-block;
-  vertical-align: middle;
+
+.project > * {
+  flex: 1 100%;
+}
+/*
+.preview {
+  height: 50%;
+} */
+
+.project-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.readMoreLess {
+  height: 50px;
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 400px) {
+  .thumbnail {
+     flex: 1 1 40%;  /*grow | shrink | basis */
+  }
+
+  .thumbnail img {
+      display: block;
+      width: 100%;
+      max-width: 350px; /*actual image width*/
+      height: auto; /* maintain aspect ratio*/
+      margin: auto; /*optional centering of image*/
+  }
+
+.right {
+  flex: 1 1 60%;
+}
+
 }

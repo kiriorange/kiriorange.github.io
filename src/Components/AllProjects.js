@@ -8,13 +8,16 @@ var projectData = []
 
 projectData.push({
   title: "Wiki Translate Bot",
-  thumbnail: <img class="thumbnail" src="https://cdn2.iconfinder.com/data/icons/dog-2/32/husky-512.png" alt="animage"/>,
+  thumbnailurl: "https://cdn2.iconfinder.com/data/icons/dog-2/32/husky-512.png",
   shortdesc: "description asdfasdfasdfa asdf asdf asdf asfd a",
-  tech:[java, javascript],
-  long: <div>So here i di d tihsl and blah </div>
+  techs: [net, java, javascript],
+  long:
+  <div>
+  <div class="desc">So here i di d tihsl and blah </div>
+  <div class="desc">So here i di d tihsl and blah </div>
+  <div class="desc">So here i di d tihsl and blah </div>
+  </div>
 })
-
-
 
 
 export default projectData;

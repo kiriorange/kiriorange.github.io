@@ -6,14 +6,14 @@ class Projects extends Component {
   renderProjects() {
       return (
         allProjects.map(function(p) {
-          return <Project thumbnail={p.thumbnail} shortdesc={p.shortdesc} title={p.title} />;
+          return <Project {...p}/>;
         })
       )
   }
 
   render() {
     return(
-        <div>Projects
+        <div style={{height: "1000px"}}>Projects
         {this.renderProjects()}
         </div>
     )

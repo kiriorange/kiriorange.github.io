@@ -6,26 +6,58 @@ class Project extends Component {
     super(props);
     this.state = {
       expanded: false,
-      displayText: "",
-      expandText: ""
+      displayText: null,
     }
   }
 
   render() {
     var props = this.props;
-    
+
     return (
-      <div class="project">
-        Project
-        {props.thumbnail}
-        <span class="title">{props.title}</span>
-        <div class="desc">{props.shortdesc}</div>
+      <div className="wrapper">
+        <div className="project">
+
+          <div className="preview project-container">
+            <img className="thumbnail" src={props.thumbnailurl} alt="thumbnail" width="100px" height="100px"/>
+            <div className="right">
+              <h2 className="title">{props.title}</h2>
+              <div className="technologies">{this.tech(props.techs)}</div>
+              <div className="words">{props.shortdesc}</div>
+            </div>
+          </div>
+
+          <div className="project-container">{this.state.displayText}</div>
+
+          {this.readMoreLessButton()}
+
+        </div>
       </div>
     )
   }
 
   tech(techs) {
+    return (
+      techs.map(function(tech) {
+        return <span>{tech}</span>;
+      })
+    )
+  }
 
+  readMoreLessButton() {
+    return (
+      <div className="readMoreLess"
+      onClick={this.state.expanded ? this.readLess.bind(this) : this.readMore.bind(this)}>{this.state.expanded ? "Read Less" : "Read More"}</div>
+    )
+  }
+
+  readMore() {
+    this.setState({expanded: true});
+    this.setState({displayText: this.props.long});
+  }
+
+  readLess() {
+    this.setState({expanded: false});
+    this.setState({displayText: null});
   }
 }
 
