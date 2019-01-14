@@ -20,9 +20,9 @@ class Project extends Component {
           <div className="preview project-container">
             <img className="thumbnail" src={props.thumbnailurl} alt="thumbnail" width="100px" height="100px"/>
             <div className="right">
-              <h2 className="title">{props.title}</h2>
+              <h3 className="project-title">{props.title}</h3>
               <div className="technologies">{this.tech(props.techs)}</div>
-              <div className="words">{props.shortdesc}</div>
+              <div className="desc">{props.shortdesc}</div>
             </div>
           </div>
 
@@ -38,7 +38,7 @@ class Project extends Component {
   tech(techs) {
     return (
       techs.map(function(tech) {
-        return <span>{tech}</span>;
+        return <span>{tech} </span>;
       })
     )
   }

@@ -1,1 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Changa+One');
 
+h3 {
+  margin: 0px;
+}
+
+.page-title {
+  text-align: center;
+  font-family: Changa One;
+  font-size: 6vw;
+  color: #494e6b;
+  padding: 10px;
+}
+
+.content {
+  margin: 0 10% 0 10%;
+  background-color: #FFF;
+}

@@ -1,16 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Monda|Sintony|Raleway');
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0px;
-  font-family: 'segoe ui';
-}
-
 .nav {
-  height: 50px;
+  height: auto;
   width: 100%;
-  background-color: #4d4d4d;
+  background-color: #3d4258;
   position: relative;
 }
 
@@ -18,11 +15,15 @@ body {
   display: inline;
 }
 
-.nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px;
+.brand {
+  background-color: #f7882f;
+  color: #fff !important;
+  width: 18%;
+  text-align: center;
+}
+
+a:hover.brand {
+  text-decoration: none !important;
 }
 
 .nav > .nav-btn {
@@ -30,20 +31,21 @@ body {
 }
 
 .nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .nav > .nav-links > a {
+  font-family: Raleway;
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #efefef;
+  color: #f7c331;
+  font-size: 2vw;
 }
 
 .nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline;
 }
 
 .nav > #nav-check {
@@ -51,11 +53,13 @@ body {
 }
 
 @media (max-width:600px) {
+  .brand {
+    width: auto;
+    text-align: left;
+  }
+
   .nav > .nav-btn {
     display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
   }
   .nav > .nav-btn > label {
     display: inline-block;
@@ -86,6 +90,7 @@ body {
   .nav > .nav-links > a {
     display: block;
     width: 100%;
+    font-size: 4vw;
   }
   .nav > #nav-check:not(:checked) + .nav-links {
     height: 0px;

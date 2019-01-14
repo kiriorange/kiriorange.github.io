@@ -5,13 +5,8 @@ import '../Styles/Navbar.css'
 class Navbar extends Component {
   render() {
     return (
-      <div class="nav">
-        <div class="nav-header">
-          <div class="nav-title">
-            JoGeek
-          </div>
-        </div>
-        <div class="nav-btn">
+      <div className="nav">
+        <div className="nav-btn">
           <label for="nav-check">
             <span></span>
             <span></span>
@@ -20,9 +15,11 @@ class Navbar extends Component {
         </div>
 
         <input type="checkbox" id="nav-check" />
-        <div class="nav-links">
-        <Link onClick={this.dismiss} to="/">Home</Link>
+        <div className="nav-links">
+        <Link onClick={this.dismiss} to="/">About</Link>
         <Link onClick={this.dismiss} to="/projects">Projects</Link>
+        <Link onClick={this.dismiss} to="/contact" className="brand">Maik</Link>
+        <Link onClick={this.dismiss} to="/contact">Resume</Link>
         <Link onClick={this.dismiss} to="/contact">Contact</Link>
         </div>
       </div>

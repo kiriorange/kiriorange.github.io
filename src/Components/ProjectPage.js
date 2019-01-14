@@ -13,8 +13,9 @@ class Projects extends Component {
 
   render() {
     return(
-        <div style={{height: "1000px"}}>Projects
-        {this.renderProjects()}
+        <div>
+            <h3 className="page-title">Projects</h3>
+            {this.renderProjects()}
         </div>
     )
   }

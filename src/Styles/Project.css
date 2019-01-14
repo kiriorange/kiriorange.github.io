@@ -12,6 +12,9 @@
   flex-wrap: wrap;
 }
 
+.preview {
+  justify-content: left;
+}
 .thumbnail {
   flex: 1 100%;
 }
@@ -20,46 +23,72 @@
   flex: 1 100%;
 }
 
-.words {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  padding-bottom: 10px
+.desc {
+  margin-bottom: 10px;
+  font-family: Sintony;
+  color: #888888;
+  font-size: 80%
 }
 
-.title {
+.project-title {
   margin: 0px;
+  font-family: Monda;
+  color: #494949;
+  font-size: 150%
 }
 
 .technologies {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  font-family: Sintony;
+  font-size: 80%;
+  color: #ce893d;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  padding: 3px 0px;
+  margin-bottom: 6px;
 }
 
 .project > * {
   flex: 1 100%;
 }
-/*
-.preview {
-  height: 50%;
-} */
+
+.contracted .preview div.desc {
+  max-height: 100px;
+  overflow-y: hidden;
+}
 
 .project-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.readMoreLess {
-  height: 50px;
-  background: green;
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 
+.readMoreLess {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #dfdfdf;
+  font-family: Sintony;
+  color: #ce893d;
+  font-size: 80%;
+  margin-bottom: 15px;
+}
+
+.readMoreLess:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 400px) {
+  .preview {
+    justify-content: center;
+  }
+
   .thumbnail {
-     flex: 1 1 40%;  /*grow | shrink | basis */
+     flex: 1 1 27%;  /*grow | shrink | basis */
+     padding-right: 20px;
+     max-width: 180px;
   }
 
   .thumbnail img {
@@ -71,7 +100,7 @@
   }
 
 .right {
-  flex: 1 1 60%;
+  flex: 1 1 73%;
 }
 
 }
