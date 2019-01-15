@@ -69,13 +69,13 @@
             }
         }
         configureShapeType() {
-            this.DOM.el.style.transformOrigin = `${this.letterRect.left + this.letterRect.width/2}px ${this.letterRect.top + this.letterRect.height/2}px`;
+            this.DOM.el.style.transformOrigin = `${this.letterRect.left + this.letterRect.width/2}px ${this.letterRect.top + window.pageYOffset + this.letterRect.height/2}px`;
 
             if ( this.type === 'circle' ) {
                 const r = 0.5*this.letterRect.width;
                 this.DOM.el.setAttribute('r', r);
                 this.DOM.el.setAttribute('cx', this.letterRect.left + this.letterRect.width/2);
-                this.DOM.el.setAttribute('cy', this.letterRect.top + this.letterRect.height/2);
+                this.DOM.el.setAttribute('cy', this.letterRect.top + window.pageYOffset + this.letterRect.height/2);
             }
             else if ( this.type === 'rect' ) {
                 const w = randomBetween(0.05,0.5,3)*this.letterRect.width;
@@ -83,7 +83,7 @@
                 this.DOM.el.setAttribute('width', w);
                 this.DOM.el.setAttribute('height', h);
                 this.DOM.el.setAttribute('x', this.letterRect.left + (this.letterRect.width-w)/2);
-                this.DOM.el.setAttribute('y', this.letterRect.top + (this.letterRect.height-h)/2);
+                this.DOM.el.setAttribute('y', this.letterRect.top + window.pageYOffset + (this.letterRect.height-h)/2);
             }
             else if ( this.type === 'polygon' ) {
                 this.DOM.el.setAttribute('points', `${this.letterRect.left} ${this.letterRect.top+this.letterRect.height}, ${this.letterRect.left+this.letterRect.width/2} ${this.letterRect.bottom-this.letterRect.width}, ${this.letterRect.left+this.letterRect.width} ${this.letterRect.top+this.letterRect.height}`);

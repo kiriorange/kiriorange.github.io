@@ -76,8 +76,12 @@
 }
 
 .readMoreLess:hover {
-  text-decoration: underline;
+  background-color: #3d4158;
   cursor: pointer;
+}
+
+.fas {
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 400px) {

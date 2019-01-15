@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Changa+One');
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
 
 h3 {
   margin: 0px;
@@ -6,10 +6,15 @@ h3 {
 
 .page-title {
   text-align: center;
-  font-family: Changa One;
+  font-family: Hammersmith One;
   font-size: 6vw;
   color: #494e6b;
   padding: 10px;
+  background-image: url(header.png);
+  background-position: 60% 110%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  height: 12vw;
 }
 
 .content {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import '../Styles/Project.css'
+import '../Styles/Project.css';
 
 class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      expanded: false,
+      isContracted: true,
       displayText: null,
     }
   }
@@ -15,13 +15,18 @@ class Project extends Component {
 
     return (
       <div className="wrapper">
-        <div className="project">
+        <div className={`project ${this.state.isContracted ? 'contracted' : ''}`}>
 
           <div className="preview project-container">
             <img className="thumbnail" src={props.thumbnailurl} alt="thumbnail" width="100px" height="100px"/>
             <div className="right">
               <h3 className="project-title">{props.title}</h3>
-              <div className="technologies">{this.tech(props.techs)}</div>
+              <div className="technologies">
+
+              <i class="fas fa-code"></i>{this.tech(props.techs)}
+              <i class="fab fa-github-alt"></i>
+
+              </div>
               <div className="desc">{props.shortdesc}</div>
             </div>
           </div>
@@ -46,17 +51,20 @@ class Project extends Component {
   readMoreLessButton() {
     return (
       <div className="readMoreLess"
-      onClick={this.state.expanded ? this.readLess.bind(this) : this.readMore.bind(this)}>{this.state.expanded ? "Read Less" : "Read More"}</div>
+      onClick={this.state.isContracted ? this.readMore.bind(this) : this.readLess.bind(this)}>
+      {this.state.isContracted ? <i class="fas fa-chevron-down"></i> : <i class="fas fa-chevron-up"></i>}
+      {this.state.isContracted ? <span>Read More</span> : <span>Read Less</span>}
+      </div>
     )
   }
 
   readMore() {
-    this.setState({expanded: true});
+    this.setState({isContracted: false});
     this.setState({displayText: this.props.long});
   }
 
   readLess() {
-    this.setState({expanded: false});
+    this.setState({isContracted: true});
     this.setState({displayText: null});
   }
 }
