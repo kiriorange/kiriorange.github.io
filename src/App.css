@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
 
+body {
+  font-family: Sintony;
+  color: #888888;
+}
+
 h3 {
   margin: 0px;
 }
@@ -20,6 +25,11 @@ h3 {
 .content {
   margin: 0 10% 0 10%;
   background-color: #FFF;
+}
+
+.content-text {
+  font-size: 80%;
+  padding: 20px;
 }
 
 @media (max-width:750px) {
