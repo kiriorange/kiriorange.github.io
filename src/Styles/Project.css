@@ -75,8 +75,8 @@
   margin-bottom: 15px;
 }
 
-.readMoreLess:hover {
-  background-color: #3d4158;
+.readMoreLess span:hover {
+  text-decoration: underline;
   cursor: pointer;
 }
 

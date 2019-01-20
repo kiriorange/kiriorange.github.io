@@ -11,7 +11,7 @@ h3 {
   color: #494e6b;
   padding: 10px;
   background-image: url(header.png);
-  background-position: 60% 110%;
+  background-position: 50% 110%;
   background-repeat: no-repeat;
   background-size: 70%;
   height: 12vw;
@@ -20,4 +20,24 @@ h3 {
 .content {
   margin: 0 10% 0 10%;
   background-color: #FFF;
+}
+
+@media (max-width:750px) {
+  .page-title {
+      height: 14vw;
+  }
+}
+
+@media (max-width:400px) {
+  .page-title {
+    background-position: 50% 100%;
+      height: 16vw;
+  }
+}
+
+@media (max-width:300px) {
+  .page-title {
+    background-position: 50% 100%;
+    height: 19vw;
+  }
 }

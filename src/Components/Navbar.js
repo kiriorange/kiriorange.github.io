@@ -12,7 +12,8 @@ class Navbar extends Component {
       isExpanded: false
     };
     this.handleScroll = this.handleScroll.bind(this);
-    this.updateDimensions = this.updateDimensions.bind(this)
+    this.updateDimensions = this.updateDimensions.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
   }
 
   handleScroll() {
@@ -24,6 +25,10 @@ class Navbar extends Component {
     this.setState({header: header.clientHeight});
   }
 
+    toggleMenu() {
+      this.setState({isExpanded: !this.state.isExpanded})
+    }
+
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener('scroll', this.handleScroll);
@@ -32,7 +37,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className={`nav ${this.state.scroll > this.state.header ? "fixed-nav" : ""}`}>
+      <nav className={`nav${this.state.scroll > this.state.header ? " fixed-nav" : ""} ${this.state.isExpanded ? "dropdown" : "none"}`}>
       <div className="nav-btn">
       <label for="nav-check">
       <span></span>
@@ -41,22 +46,25 @@ class Navbar extends Component {
       </label>
       </div>
 
-      <input type="checkbox" id="nav-check" />
-      <div className="nav-links">
-      <Link onClick={this.dismiss} to="/">About</Link>
-      <Link onClick={this.dismiss} to="/projects">Projects</Link>
-      <Link onClick={this.dismiss} to="/contact" className="brand">Maik</Link>
-      <Link onClick={this.dismiss} to="/contact">Resume</Link>
-      <Link onClick={this.dismiss} to="/contact">Contact</Link>
+      <input type="checkbox" id="nav-check" checked={this.state.isExpanded} onChange={this.toggleMenu} />
+
+      <div className="nav-piece-center brand">
+        <Link onClick={this.toggleMenu} to="/" >Maik</Link>
       </div>
+
+      <div className="nav-piece nav-left">
+        <Link onClick={this.toggleMenu} to="/">About</Link>
+        <Link onClick={this.toggleMenu} to="/projects">Projects</Link>
+      </div>
+
+      <div className="nav-piece nav-right">
+        <a href="https://maikgr.github.io/file/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <Link onClick={this.toggleMenu} to="/contact">Contact</Link>
+      </div>
+
       </nav>
     )
   }
-
-  dismiss() {
-    document.getElementById("nav-check").checked = false;
-  }
-
 
 }
 
