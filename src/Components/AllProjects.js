@@ -58,7 +58,7 @@ projectData.push({
   and save it into a database based on MongoDB. I then added a Discord bot to a Discord server, where the users can use commands
   to retrieve those stored wiki entries. When the bot posts the entries in Discord, it will also automatically
   translate Japanese terms into English.</p>
-  <img src="https://kiriorange.github.io/images/wiki_thumbnail.png" />
+  <img src="/images/wiki_thumbnail.png" />
   <p>The purpose of this bot is to ??</p>
   </div>
 })

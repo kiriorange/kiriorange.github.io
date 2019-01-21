@@ -12,6 +12,10 @@
   flex-wrap: wrap;
 }
 
+.project img {
+  max-width: 70vw;
+}
+
 .preview {
   justify-content: left;
 }
@@ -27,19 +31,16 @@
   margin-bottom: 10px;
   font-family: Sintony;
   color: #888888;
-  font-size: 80%;
 }
 
 .project-title {
   margin: 0px;
   font-family: Monda;
   color: #494949;
-  font-size: 150%
 }
 
 .technologies {
   font-family: Sintony;
-  font-size: 80%;
   color: #ce893d;
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
@@ -71,9 +72,9 @@
   border-bottom: 1px solid #dfdfdf;
   font-family: Sintony;
   color: #ce893d;
-  font-size: 80%;
   margin-bottom: 15px;
 }
+
 
 .readMoreLess span:hover {
   text-decoration: underline;
@@ -88,7 +89,17 @@
   padding-left: 8px;
 }
 
-@media screen and (min-width: 400px) {
+.desc, .technologies, .readMoreLess {
+  font-size: 2.7vw;
+}
+
+.project-title {
+  font-size: 4.2vw;
+}
+
+
+/* Width is at least 600px */
+@media screen and (min-width: 600px) {
   .preview {
     justify-content: center;
   }
@@ -107,8 +118,34 @@
       margin: auto; /*optional centering of image*/
   }
 
-.right {
-  flex: 1 1 73%;
+  .right {
+    flex: 1 1 73%;
+  }
+  .project .desc, .project .technologies, .project .readMoreLess {
+    font-size: 2vw;
+  }
+
+  .project .project-title {
+    font-size: 3vw;
+  }
 }
 
+@media screen and (min-width: 700px) {
+    .project .desc, .project .technologies, .project .readMoreLess {
+      font-size: 1.5vw;
+    }
+
+    .project .project-title {
+      font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .project .desc, .project .technologies, .project .readMoreLess {
+      font-size: 1vw;
+    }
+
+    .project .project-title {
+      font-size: 2vw;
+    }
 }

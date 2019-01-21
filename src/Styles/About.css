@@ -2,5 +2,11 @@
   margin: 0px;
   font-family: Monda;
   color: #494949;
-  font-size: 150%
+  font-size: 2vw;
+}
+
+@media (max-width:600px) {
+  .section-title {
+    font-size: 4vw;
+  }
 }
