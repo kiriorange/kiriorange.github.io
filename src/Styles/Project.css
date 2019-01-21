@@ -80,8 +80,12 @@
   cursor: pointer;
 }
 
-.fas {
-  padding-right: 10px;
+.icon {
+  padding-right: 6px;
+}
+
+.fa-github-alt {
+  padding-left: 8px;
 }
 
 @media screen and (min-width: 400px) {

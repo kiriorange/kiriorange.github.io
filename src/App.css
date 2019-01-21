@@ -9,6 +9,17 @@ h3 {
   margin: 0px;
 }
 
+a {
+  font-family: Sintony;
+  color: #ce893d;
+}
+
+strong {
+    color: #ce893d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .page-title {
   text-align: center;
   font-family: Hammersmith One;

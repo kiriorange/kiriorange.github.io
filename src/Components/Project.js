@@ -23,10 +23,9 @@ class Project extends Component {
               <h3 className="project-title">{props.title}</h3>
               <div className="technologies">
 
-              <i class="fas fa-code"></i>{this.tech(props.techs)}
-              <i class="fab fa-github-alt"></i>
-
-              </div>
+              <i class="icon fas fa-code"></i>{this.tech(props.techs)}
+              <i class="icon fab fa-github-alt"></i><a href={props.github} target="_blank" rel="noopener noreferrer">View on Github</a>
+            </div>
               <div className="desc">{props.shortdesc}</div>
             </div>
           </div>
@@ -41,18 +40,32 @@ class Project extends Component {
   }
 
   tech(techs) {
+    let techLength = techs.length;
     return (
-      techs.map(function(tech) {
-        return <span>{tech} </span>;
+      techs.map(function(tech, i) {
+        return i === techLength - 1 ?
+          <span>{tech}</span> :
+          <span>{tech}, </span>;
       })
     )
+  }
+
+  goLink(props) {
+    if (props.go) {
+      return (
+        <span>
+        <i class="far fa-arrow-alt-circle-right"></i>
+        viewApp
+        </span>
+      )
+    }
   }
 
   readMoreLessButton() {
     return (
       <div className="readMoreLess"
       onClick={this.state.isContracted ? this.readMore.bind(this) : this.readLess.bind(this)}>
-      {this.state.isContracted ? <i class="fas fa-chevron-down"></i> : <i class="fas fa-chevron-up"></i>}
+      {this.state.isContracted ? <i class="icon fas fa-chevron-down"></i> : <i class="icon fas fa-chevron-up"></i>}
       {this.state.isContracted ? <span>Read More</span> : <span>Read Less</span>}
       </div>
     )
