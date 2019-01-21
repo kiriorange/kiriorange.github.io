@@ -2,11 +2,32 @@
   margin: 0px;
   font-family: Monda;
   color: #494949;
-  font-size: 2vw;
+  font-size: 4vw;
 }
 
-@media (max-width:600px) {
+.content-text {
+  font-size: 2.7vw;
+}
+
+
+@media (min-width:600px) {
   .section-title {
-    font-size: 4vw;
+    font-size: 3vw;
+  }
+
+  .content-text {
+    font-size: 2.1vw;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .content-text {
+    font-size: 1.7vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .content-text {
+    font-size: 1.4vw;
   }
 }

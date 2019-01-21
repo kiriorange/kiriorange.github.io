@@ -58,7 +58,7 @@ class Navbar extends Component {
       </div>
 
       <div className="nav-piece nav-right">
-        <a href="https://maikgr.github.io/file/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         <Link onClick={this.toggleMenu} to="/contact">Contact</Link>
       </div>
 

@@ -91,6 +91,8 @@
   .nav > .nav-piece-center {
     order: 0;
     text-align: center;
+    align-items: center;
+    height: 50px;
   }
 
   .nav > .nav-btn {

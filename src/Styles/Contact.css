@@ -1,0 +1,17 @@
+.contacts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contacts a {
+  font-size: 3vw;
+  flex: 1;
+  text-decoration: none;
+  text-align: center;
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+}

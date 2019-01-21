@@ -21,11 +21,7 @@ class Project extends Component {
             <img className="thumbnail" src={props.thumbnailurl} alt="thumbnail" width="100px" height="100px"/>
             <div className="right">
               <h3 className="project-title">{props.title}</h3>
-              <div className="technologies">
-
-              <i class="icon fas fa-code"></i>{this.tech(props.techs)}
-              <i class="icon fab fa-github-alt"></i><a href={props.github} target="_blank" rel="noopener noreferrer">View on Github</a>
-            </div>
+              {this.techBlock(props)}
               <div className="desc">{props.shortdesc}</div>
             </div>
           </div>
@@ -36,6 +32,25 @@ class Project extends Component {
 
         </div>
       </div>
+    )
+  }
+
+  techBlock(props) {
+    if (!props.download) {
+      return (
+        <div className="technologies">
+          <i class="icon fas fa-code"></i>{this.tech(props.techs)}
+          <i class="icon fab fa-github-alt"></i><a href={props.github} target="_blank" rel="noopener noreferrer">View on Github</a>
+      </div>
+      )
+    }
+
+    return (
+      <div className="technologies">
+        <i class="icon fas fa-code"></i>{this.tech(props.techs)}
+        <i class="icon fab fa-github-alt"></i><a href={props.github} target="_blank" rel="noopener noreferrer">View on Github</a>
+        <i class="icon far fa-file"></i><a href={props.download} target="_blank" rel="noopener noreferrer">See site</a>
+    </div>
     )
   }
 
