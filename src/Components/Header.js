@@ -7,10 +7,10 @@ var anime = window.anime;
 class Header extends Component {
   render() {
     return(
-      <div class="header">
-      <div class="text">
-      <h2 class="word word--6">Maik Rantetasik</h2>
-      <span class="title">Full Stack Developer</span>
+      <div className="header">
+      <div className="text">
+      <h2 className="word word--6">Maik Rantetasik</h2>
+      <span className="title">Full Stack Developer</span>
       </div>
       </div>
     )

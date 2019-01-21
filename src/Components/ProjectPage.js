@@ -5,8 +5,8 @@ import allProjects from './AllProjects';
 class Projects extends Component {
   renderProjects() {
       return (
-        allProjects.map(function(p) {
-          return <Project {...p}/>;
+        allProjects.map(function(p, i) {
+          return <Project {...p} key={i}/>;
         })
       )
   }

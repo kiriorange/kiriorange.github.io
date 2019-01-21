@@ -39,7 +39,7 @@ class Navbar extends Component {
     return (
       <nav className={`nav${this.state.scroll > this.state.header ? " fixed-nav" : ""} ${this.state.isExpanded ? "dropdown" : "none"}`}>
       <div className="nav-btn">
-      <label for="nav-check">
+      <label htmlFor="nav-check">
       <span></span>
       <span></span>
       <span></span>

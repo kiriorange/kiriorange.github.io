@@ -39,17 +39,17 @@ class Project extends Component {
     if (!props.download) {
       return (
         <div className="technologies">
-          <i class="icon fas fa-code"></i>{this.tech(props.techs)}
-          <i class="icon fab fa-github-alt"></i><a href={props.github} target="_blank" rel="noopener noreferrer">View on Github</a>
+          <i className="icon fas fa-code"></i>{this.tech(props.techs)}
+          <i className="icon fab fa-github-alt"></i><a href={props.github} target="_blank" rel="noopener noreferrer">View on Github</a>
       </div>
       )
     }
 
     return (
       <div className="technologies">
-        <i class="icon fas fa-code"></i>{this.tech(props.techs)}
-        <i class="icon fab fa-github-alt"></i><a href={props.github} target="_blank" rel="noopener noreferrer">View on Github</a>
-        <i class="icon far fa-file"></i><a href={props.download} target="_blank" rel="noopener noreferrer">See site</a>
+        <i className="icon fas fa-code"></i>{this.tech(props.techs)}
+        <i className="icon fab fa-github-alt"></i><a href={props.github} target="_blank" rel="noopener noreferrer">View on Github</a>
+        <i className="icon far fa-file"></i><a href={props.download} target="_blank" rel="noopener noreferrer">See site</a>
     </div>
     )
   }
@@ -69,7 +69,7 @@ class Project extends Component {
     if (props.go) {
       return (
         <span>
-        <i class="far fa-arrow-alt-circle-right"></i>
+        <i className="far fa-arrow-alt-circle-right"></i>
         viewApp
         </span>
       )
@@ -80,7 +80,7 @@ class Project extends Component {
     return (
       <div className="readMoreLess"
       onClick={this.state.isContracted ? this.readMore.bind(this) : this.readLess.bind(this)}>
-      {this.state.isContracted ? <i class="icon fas fa-chevron-down"></i> : <i class="icon fas fa-chevron-up"></i>}
+      {this.state.isContracted ? <i className="icon fas fa-chevron-down"></i> : <i className="icon fas fa-chevron-up"></i>}
       {this.state.isContracted ? <span>Read More</span> : <span>Read Less</span>}
       </div>
     )
