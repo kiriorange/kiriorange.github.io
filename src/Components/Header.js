@@ -9,8 +9,8 @@ class Header extends Component {
     return(
       <div className="header">
       <div className="text">
-      <h2 className="word word--6">Maik Rantetasik</h2>
-      <span className="title">Full Stack Developer</span>
+      <h2 className="word word--6">Zeke Tan</h2>
+      <span className="title">Software Engineer</span>
       </div>
       </div>
     )
@@ -28,7 +28,7 @@ class Header extends Component {
     var element = document.querySelector('.word'),
     element2 = document.querySelector('.title'),
     options = {
-      shapeColors: ['#fff','#6b7a8f', '#f7882f', '#f7c331', '#dcc7aa'],
+      shapeColors: ['#a7d2cb', '#f2d388', '#c98474', '#874c62'],
       totalShapes: 7
     }
 

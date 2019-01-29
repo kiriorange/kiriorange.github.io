@@ -8,14 +8,14 @@
   display:flex;
   align-items: center;
   justify-content: center;
-  background: #363a4e;
+  background: #fbf9ec;
 }
 
 .title {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  color: #fff;
+  color: #000;
   font-size: 4vw;
 }
 /* Word + SVG styles */
@@ -35,19 +35,20 @@
     user-select: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     grid-area: title;
-    font-size: 11vw;
+    font-size: 17vw;
     font-weight: 400;
-    color: #fff;
+    color: #000;
     font-family: 'Hammersmith One', sans-serif;
 }
 
 .word .char2,
-.word .char9 {
-	color: #f7882f;
+.word .char8 {
+	color: #c98474;
+	/*color: #874c62;*/
 }
 
 .title {
-  color: #fff;
+  color: #000;
   font-family: 'Monda', sans-serif;
 }
 

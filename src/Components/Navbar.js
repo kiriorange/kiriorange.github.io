@@ -48,10 +48,6 @@ class Navbar extends Component {
 
       <input type="checkbox" id="nav-check" checked={this.state.isExpanded} onChange={this.toggleMenu} />
 
-      <div className="nav-piece-center brand">
-        <Link onClick={this.toggleMenu} to="/" >Maik</Link>
-      </div>
-
       <div className="nav-piece nav-left">
         <Link onClick={this.toggleMenu} to="/">About</Link>
         <Link onClick={this.toggleMenu} to="/projects">Projects</Link>

@@ -11,11 +11,11 @@ h3 {
 
 a {
   font-family: Sintony;
-  color: #ce893d;
+  color: #593341;
 }
 
 strong {
-    color: #ce893d;
+    color: #593341;
     font-weight: bold;
     text-decoration: none;
 }
@@ -24,7 +24,7 @@ strong {
   text-align: center;
   font-family: Hammersmith One;
   font-size: 6vw;
-  color: #494e6b;
+  color: #593341;
   padding: 10px;
   background-image: url(header.png);
   background-position: 50% 110%;

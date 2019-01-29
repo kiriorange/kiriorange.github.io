@@ -36,12 +36,12 @@
 .project-title {
   margin: 0px;
   font-family: Monda;
-  color: #494949;
+  color: #c98575;
 }
 
 .technologies {
   font-family: Sintony;
-  color: #ce893d;
+  color: #593341;
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
   padding: 3px 0px;
@@ -71,7 +71,7 @@
   align-items: center;
   border-bottom: 1px solid #dfdfdf;
   font-family: Sintony;
-  color: #ce893d;
+  color: #c98474;
   margin-bottom: 15px;
 }
 
